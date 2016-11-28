@@ -1,0 +1,239 @@
+$sm-size:330px;
+$md-size:500px;
+$lg-size:600px;
+@mixin back-ground($background,$position) {
+		background:-webkit-radial-gradient($position,#ece7e7,$background,#ece7e7);
+		background:   -moz-linear-gradient($position,#ece7e7,$background,#ece7e7);
+		background: 	-o-linear-gradient($position,#ece7e7,$background,#ece7e7);
+		background:        linear-gradient($position,#ece7e7,$background,#ece7e7);
+		background-color:$background;
+	}
+
+html,body{
+	height:100%;
+}
+body{
+	background-color:#000;
+	color:#fff;
+	display:-webkit-flex;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:350px;
+	@media(min-width:768px) {
+		min-height:600px;
+	}
+	@media(min-width:992px) {
+		min-height:700px;
+	}
+}
+.container {
+	border-radius:50%;
+	height:$sm-size;
+	width:$sm-size;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+
+	@media(min-width:768px) {
+		height:$md-size;
+		width:$md-size;
+	}
+	@media(min-width:992px) {
+		height:$lg-size;
+		width:$lg-size;
+	}
+
+	.controls {
+		visibility:hidden;
+		border:5px solid #75F9FA;
+		border-radius:50%;
+		position:absolute;
+		z-index:100;
+		background-color:#000;
+		text-align:center;
+		height:$sm-size / 2 ;
+		width:$sm-size / 2 ;
+		left:($sm-size / 2 - 10px) / 2;
+		top:($sm-size / 2 - 10px) / 2;
+
+		@media(min-width:768px) {
+			height:$md-size / 2 ;
+			width:$md-size / 2 ;
+			left:($md-size / 2 - 10px) / 2;
+			top:($md-size / 2 - 10px) / 2;
+		}
+		@media(min-width:992px) {
+			height:$lg-size / 2 ;
+			width:$lg-size / 2 ;
+			left:($lg-size / 2 - 10px) / 2;
+			top:($lg-size / 2 - 10px) / 2;
+		}
+		
+		.display {
+			font-size:1.0em;
+			text-align:center;
+			margin-top:20%;
+			min-height:21px;
+			visibility:hidden;
+
+			@media(min-width:768px) {
+				font-size:1.5em;
+				min-height:30px;
+			}
+			@media(min-width:992px) {
+				font-size:2em;
+				min-height:34px;
+			}
+		}
+		
+		#main {
+			visibility:visible;
+		}
+		
+		.go,.strict {
+			visibility:hidden;
+		}
+
+		// .go .on,
+		// .strict .on {
+		// 	visibility:visible;
+		// }
+
+		.opts {
+			display:inline-block;
+			text-align:center;
+			font-size:0.7em;
+			margin:0 auto;
+			margin-top:10.5px;
+			@media(min-width:768px) {
+				font-size:1.2em;
+				margin-top:25px;
+			}
+			@media(min-width:992px) {
+				font-size:1.5em;
+				margin-top:31px;
+			}
+
+			
+
+			button {
+				display:block;
+				cursor: pointer;
+				border-radius: 50%;
+				width: 25px;
+				height: 25px;
+				border:2px solid #75F9FA;
+				background: inherit;
+				margin-bottom:10px;
+
+				@media(min-width:768px) {
+					width:40px;
+					height:40px;
+				}
+				@media(min-width:992px) {
+					width:50px;
+					height:50px;
+				}
+
+				&:focus {
+					outline:none;
+				}
+
+			}
+		}
+		.opts #power {
+			margin-left:18px;
+			margin-right:18px;
+
+			
+			@media(min-width:768px) {
+				margin-left:22px;
+				margin-right:22px;
+			}
+			@media(min-width:992px) {
+				margin-left:24px;
+				margin-right:24px;
+			}
+		}
+	}
+
+	.ss-input {
+		display:none;
+		height:50%;
+		width:50%;
+		float:left;
+		overflow:hidden;
+		z-index:1;
+
+		&:hover {
+			cursor:pointer;
+		}
+
+		&.active {
+			cursor:pointer;
+			// .ss-light {
+			// 	background-color:rgba(255,255,255,0.6);
+			// }
+		}
+
+		.ss-light {
+			height:100%;
+			width:100%;
+			// background-color:rgba(255,255,255,0);
+			// transition:background-color 0.07s linear;
+			z-index:2;
+		}
+	}
+	
+	.ss-g.on { 
+		@include back-ground(green,bottom right);
+	}
+	.ss-r.on {
+		@include back-ground(red,bottom left);
+	}
+	.ss-b.on {
+		@include back-ground(blue,top right);
+	}
+	.ss-y.on {
+		@include back-ground(yellow,top left);
+	}
+	@at-root .ss-g {
+		
+		box-sizing:border-box;
+		border-top-left-radius:100%;
+		border:5px solid #75F9FA;
+		border-bottom:none;
+		border-right:none;
+		// border-bottom:5px solid #75F9FA;
+		// border-right:5px solid #75F9FA;
+	}
+
+	@at-root .ss-r {
+		box-sizing:border-box;
+		border-top-right-radius:100%;
+		border:5px solid #75F9FA;
+		// border-bottom:5px solid #75F9FA;
+	}
+
+	@at-root .ss-b {
+		box-sizing:border-box;
+		border-bottom-left-radius:100%;
+		border:5px solid #75F9FA;
+		// border-right:5px solid #75F9FA;
+	}
+
+	@at-root .ss-y {
+		border-bottom-right-radius:100%;
+		border:5px solid #75F9FA;
+		box-sizing:border-box;
+		border-top:none;
+		border-left:none;
+
+	}
+	
+}
+
+
+
+

@@ -1,0 +1,180 @@
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #000;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px; }
+  @media (min-width: 768px) {
+    body {
+      min-height: 600px; } }
+  @media (min-width: 992px) {
+    body {
+      min-height: 700px; } }
+
+.container {
+  border-radius: 50%;
+  height: 330px;
+  width: 330px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; }
+  @media (min-width: 768px) {
+    .container {
+      height: 500px;
+      width: 500px; } }
+  @media (min-width: 992px) {
+    .container {
+      height: 600px;
+      width: 600px; } }
+  .container .controls {
+    visibility: hidden;
+    border: 5px solid #75F9FA;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    background-color: #000;
+    text-align: center;
+    height: 165px;
+    width: 165px;
+    left: 77.5px;
+    top: 77.5px; }
+    @media (min-width: 768px) {
+      .container .controls {
+        height: 250px;
+        width: 250px;
+        left: 120px;
+        top: 120px; } }
+    @media (min-width: 992px) {
+      .container .controls {
+        height: 300px;
+        width: 300px;
+        left: 145px;
+        top: 145px; } }
+    .container .controls .display {
+      font-size: 1.0em;
+      text-align: center;
+      margin-top: 20%;
+      min-height: 21px;
+      visibility: hidden; }
+      @media (min-width: 768px) {
+        .container .controls .display {
+          font-size: 1.5em;
+          min-height: 30px; } }
+      @media (min-width: 992px) {
+        .container .controls .display {
+          font-size: 2em;
+          min-height: 34px; } }
+    .container .controls #main {
+      visibility: visible; }
+    .container .controls .go, .container .controls .strict {
+      visibility: hidden; }
+    .container .controls .opts {
+      display: inline-block;
+      text-align: center;
+      font-size: 0.7em;
+      margin: 0 auto;
+      margin-top: 10.5px; }
+      @media (min-width: 768px) {
+        .container .controls .opts {
+          font-size: 1.2em;
+          margin-top: 25px; } }
+      @media (min-width: 992px) {
+        .container .controls .opts {
+          font-size: 1.5em;
+          margin-top: 31px; } }
+      .container .controls .opts button {
+        display: block;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        border: 2px solid #75F9FA;
+        background: inherit;
+        margin-bottom: 10px; }
+        @media (min-width: 768px) {
+          .container .controls .opts button {
+            width: 40px;
+            height: 40px; } }
+        @media (min-width: 992px) {
+          .container .controls .opts button {
+            width: 50px;
+            height: 50px; } }
+        .container .controls .opts button:focus {
+          outline: none; }
+    .container .controls .opts #power {
+      margin-left: 18px;
+      margin-right: 18px; }
+      @media (min-width: 768px) {
+        .container .controls .opts #power {
+          margin-left: 22px;
+          margin-right: 22px; } }
+      @media (min-width: 992px) {
+        .container .controls .opts #power {
+          margin-left: 24px;
+          margin-right: 24px; } }
+  .container .ss-input {
+    display: none;
+    height: 50%;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    z-index: 1; }
+    .container .ss-input:hover {
+      cursor: pointer; }
+    .container .ss-input.active {
+      cursor: pointer; }
+    .container .ss-input .ss-light {
+      height: 100%;
+      width: 100%;
+      z-index: 2; }
+  .container .ss-g.on {
+    background: -webkit-radial-gradient(bottom right, #ece7e7, green, #ece7e7);
+    background: -moz-linear-gradient(bottom right, #ece7e7, green, #ece7e7);
+    background: -o-linear-gradient(bottom right, #ece7e7, green, #ece7e7);
+    background: linear-gradient(bottom right, #ece7e7, green, #ece7e7);
+    background-color: green; }
+  .container .ss-r.on {
+    background: -webkit-radial-gradient(bottom left, #ece7e7, red, #ece7e7);
+    background: -moz-linear-gradient(bottom left, #ece7e7, red, #ece7e7);
+    background: -o-linear-gradient(bottom left, #ece7e7, red, #ece7e7);
+    background: linear-gradient(bottom left, #ece7e7, red, #ece7e7);
+    background-color: red; }
+  .container .ss-b.on {
+    background: -webkit-radial-gradient(top right, #ece7e7, blue, #ece7e7);
+    background: -moz-linear-gradient(top right, #ece7e7, blue, #ece7e7);
+    background: -o-linear-gradient(top right, #ece7e7, blue, #ece7e7);
+    background: linear-gradient(top right, #ece7e7, blue, #ece7e7);
+    background-color: blue; }
+  .container .ss-y.on {
+    background: -webkit-radial-gradient(top left, #ece7e7, yellow, #ece7e7);
+    background: -moz-linear-gradient(top left, #ece7e7, yellow, #ece7e7);
+    background: -o-linear-gradient(top left, #ece7e7, yellow, #ece7e7);
+    background: linear-gradient(top left, #ece7e7, yellow, #ece7e7);
+    background-color: yellow; }
+  .ss-g {
+    box-sizing: border-box;
+    border-top-left-radius: 100%;
+    border: 5px solid #75F9FA;
+    border-bottom: none;
+    border-right: none; }
+  .ss-r {
+    box-sizing: border-box;
+    border-top-right-radius: 100%;
+    border: 5px solid #75F9FA; }
+  .ss-b {
+    box-sizing: border-box;
+    border-bottom-left-radius: 100%;
+    border: 5px solid #75F9FA; }
+  .ss-y {
+    border-bottom-right-radius: 100%;
+    border: 5px solid #75F9FA;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none; }
+
+/*# sourceMappingURL=style.css.map */
