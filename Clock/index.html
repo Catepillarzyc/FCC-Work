@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Pomodoro Clock</h1>
+
+		<div class="settings">
+			<div id="break">
+				<h4>Break Timer</h4>
+				<span class="decrement">-</span>
+				<span class="time">5</span>
+				<span class="increment">+</span>
+			</div>
+
+			<div id="work">
+				<h4>Work Time</h4>
+				<span class="decrement">-</span>
+				<span class="time">25</span>
+				<span class="increment">+</span>
+			</div>
+		</div>
+
+		<div id="timer">
+			<div id="current-status"></div>
+			<div id="current-time">25:00</div>
+			<span id="round-time">Round 1 / 4</span>
+			<div id="progress"></div>
+		</div>
+
+		<div class="controls">
+			<button id="start">Start</button>
+			<button id="pause" class="running">Pause</button>
+			<button id="reset" class="running">Reset</button>
+		</div>
+	</div>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js'></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

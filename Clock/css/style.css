@@ -1,0 +1,148 @@
+html,body {
+	background: #2E2E2E;
+	color: #fff;
+	user-select:none;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+h1{
+	margin-bottom: 15px;
+}
+h4{
+	margin: 0;
+	margin-bottom: 15px;
+}
+.settings {
+	width: 100%;
+	font-size: 20px;
+	box-sizing: border-box;
+	border: none;
+	padding: 20px 0;
+	border-top: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+}
+#break,
+#work { 
+	width: 49%;
+	display: inline-block;
+	box-sizing: border-box;
+	text-align: center;
+}
+#break {
+	border-right: 1px solid #616161;
+}
+
+.increment,
+.decrement {
+	cursor: pointer;
+}
+
+.increment {
+	font-size: 30px;
+	line-height:45px;
+	vertical-align: top;
+}
+.time,
+.decrement{
+	font-size: 40px;
+}
+#timer{
+	text-align: center;
+	font-size: 70px;
+	width:100%;
+	min-height: 300px;
+	margin: 0 atuo 10px;
+	position: relative;
+}
+
+#current-status {
+	font-size: 50px;
+	position: absolute;
+	top: 25%;
+	left: 0;
+	right: 0;
+	margin:auto;
+}
+
+#current-time {
+	position: absolute;
+	top: 55%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#round-time {
+	position: absolute;
+	top: 85%;
+	left: 0;
+	right: 0;
+	margin:auto;
+	font-size: 30px;
+}
+
+#progress {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 0;
+	width: 80%;
+	margin:auto;
+	max-width: 360px;
+}
+
+.controls {
+	text-align: center;
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 15%;
+}
+
+button {
+	border:1px solid #FFF;
+	color:#FFF;
+	font-size: 30px;
+	cursor: pointer;
+	padding: 10px 20px;
+	background-color: #2E2E2E;
+}
+
+button:focus{
+	outline: none;
+}
+
+@media screen and (max-width: 400px) {
+	#current-status {
+		font-size: 40px;
+		top: 23%;
+	}
+	#current-time {
+		font-size: 60px;
+		top: 43%;
+	}
+	#round-time {
+		font-size: 25px;
+		top: 70%;
+	}
+	.controls{
+		bottom:3%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
