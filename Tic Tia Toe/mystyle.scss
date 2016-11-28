@@ -1,0 +1,181 @@
+$font:'Chewy',cursive;
+@mixin lr-margin($FloatDir){
+	float:$FloatDir;
+	margin-#{$FloatDir}:10%;
+	display: none;
+	margin-top:5%;
+	font-size:200%;
+	text-align:center;
+}
+
+@mixin xo-style($xoColor){
+	opacity:0.5;
+	background:$xoColor;
+	font-size:100%;
+	transition:0.1s ease-out all;
+
+	&:hover{
+		opacity:1;
+	}	
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: $font;
+}
+h1{
+	text-align: center;
+	font-size: 800%;
+	margin-top: 2%;
+}
+#symbol-container{
+	display:block;
+	background: #ECF0F1;
+	text-align: center;
+	font-size:30px;
+	height: 30%;
+	width: 30%;
+	margin:8% auto;
+	border: 8px solid black;
+	padding:2%;
+
+	button{
+		padding:80px;
+		font-size:20px;
+		border-radius:50%;
+		border:none;
+		margin:0 4%;
+	}
+
+	#x{
+		@include xo-style(#F25C5C);
+	}
+
+	#o{
+		@include xo-style(#2D89EB);
+	}
+}
+button{
+	font-family:$font;
+	outline: none;
+	box-shadow:1px 1px 1px black;
+}
+.cell-container{
+	display: none;
+	width:30%;
+	height:40%;
+	position: relative;
+	
+	text-align:center;
+	margin: 0 auto;
+	
+	color:#fff;
+
+	div{
+		height:33.3333%;
+		width:100%;
+		margin:auto;	
+	}
+	span{
+		background:#000;
+		box-sizing:border-box;
+		font-size:300%;
+		line-height:137px;
+		float:left;
+		border: 2px solid white;
+		width:33.333%;
+		widows: 100px;
+		height:100%;
+		display:inline-block;
+		text-align:center;
+		
+		&:hover{
+			background:gray;
+			opacity:0.3;
+		}
+	}
+	.top-left{
+		border-top:none;
+		border-left:none;
+	}
+	.top-middle{
+		border-top:none;
+	}
+	.top-right{
+		border-top:none;
+		border-right:none;
+	}
+	.center-left{
+		border-left:none;
+	}
+	.center-right{
+		border-right:none;
+	}
+	.bottom-left{
+		border-left:none;
+		border-bottom:none;
+	}
+	.bottom-middle{
+		border-bottom:none;
+	}
+	.bottom-right{
+		border-right:none;
+		border-bottom:none;
+	}
+}
+
+#left{
+	@include lr-margin(left);
+
+	span{
+		color:#F25C5C;
+	}
+}
+#right{
+	@include lr-margin(right);
+
+	span{
+		color:#2D89EB;
+	}
+}
+
+.container{
+	display:none;
+	width:35%;
+	height:40%;
+	font-size:200%;
+	text-align:center;
+	margin: 4% auto;
+
+	button{
+		padding:40px;
+		font-size:100%;
+	}
+	.newGame{
+		margin-right:20px;
+	}
+}
+.line{
+	width:130%;
+	border-top:5px dashed white;
+	position:absolute;
+	top:48%;
+	left:-15%;
+	transform:rotate(-135deg);
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

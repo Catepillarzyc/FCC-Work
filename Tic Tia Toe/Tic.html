@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<h1>Tic Tac Toe</h1>
+	<div id="symbol-container">
+		<p>choose a symbol:</p>
+		<button id="x">X</button>
+		<button id="o">O</button>
+	</div>
+	<div id="left"><p>Plyaer wins:</p><span>0</span></div>
+	<div id="right"><p>Computer wins:</p><span>0</span></div>
+	<div class="cell-container">
+		<div>
+			<!-- <hr class="line"> -->
+			<span class="cell cell-0 top-left" data-value="0"></span>
+			<span class="cell cell-1 top-middle" data-value="1"></span>
+			<span class="cell cell-2 top-right" data-value="2"></span>
+		</div>
+		<div>
+			<span class="cell cell-3 center-left" data-value="3"></span>
+			<span class="cell cell-4 center-middle" data-value="4"></span>
+			<span class="cell cell-5 center-right" data-value="5"></span>
+		</div>
+		<div>
+			<span class="cell cell-6 bottom-left" data-value="6"></span>
+			<span class="cell cell-7 bottom-middle" data-value="7"></span>
+			<span class="cell cell-8 bottom-right" data-value="8"></span>
+		</div>
+	</div>
+	<div class="container">
+		<button class="newGame">New Game</button>
+		<button class="reset">Reset Wins</button>
+	</div>
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
